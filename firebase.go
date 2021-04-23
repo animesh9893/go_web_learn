@@ -10,7 +10,7 @@ import (
 
 func addToFirebase(obj User){
 	ctx := context.Background()
-	sa := option.WithCredentialsFile("./firebaseCred.json")
+	sa := option.WithCredentialsFile("../firebaseCred.json")
 	app, err := firebase.NewApp(ctx, nil, sa)
 	if err != nil {
 	  log.Fatalln(err)
